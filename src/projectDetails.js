@@ -1,0 +1,17 @@
+export const projects = [
+    {
+        name: 'PyPractice',
+        summary: 'Python practice problems and challenges with interative Python interpreter.',
+        technologies: ['React', 'Redux', 'Flask', 'MaterialUI', 'SQLAlchemy', 'Docker'],
+    },
+    {
+        name: 'Write Me In',
+        summary: 'Collaborative storywriting - edit, contribute and browse user created stories.',
+        technologies: ['React/Redux', 'Express', 'Sequelize', 'PostgreSQL', 'CSS3']
+    },
+    {
+        name: 'Astrologue',
+        summary: 'Render astronomical chart data with attractive presentation, based on specified time and location.',
+        technologies: ['React/Redux', 'Django', 'PostgreSQL', 'CSS3', 'Docker']
+    }
+]
