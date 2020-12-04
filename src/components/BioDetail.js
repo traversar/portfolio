@@ -8,11 +8,9 @@ const BioDetail = () => {
         <Element name='welcome-section'>
             <div className='biodetail-container'>
                 <div className='biodetail-details'>
-                    <div className='detail-container-pane1'>
-                        <img className='biodetail-icon-img' src={icon}></img>
-                    </div>
+                    <img className='biodetail-icon-img' src={icon}></img>
                     <div className='detail-container-pane2'>
-                        <h1>Hi, I'm Andrew</h1>
+                        <h1>Andrew Travers</h1>
                         <h2>Full Stack Software Engineer</h2>
                     </div>
                 </div>

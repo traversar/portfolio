@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter } from 'react-router-dom';
 import {Element} from 'react-scroll';
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib';
@@ -14,17 +14,17 @@ const Contact = () => {
                     </h3>
                 </div>
                 <div className='contact-links'>
-                    <IconContext.Provider value={{ size: '8vw' }}>
-                        <Link to='https://www.linkedin.com/in/andrew-travers-8273761bb/'>
-                            <div>
+                    <IconContext.Provider value={{ size: '8em' }}>
+                        <div>
+                            <a style={{color: 'white'}} href='https://www.linkedin.com/in/andrew-travers-8273761bb/' target='_blank'>
                                 <FaLinkedin />
-                            </div>
-                        </Link>
-                        <Link to='https://github.com/traversar/'>
-                            <div>
+                            </a>
+                        </div>
+                        <div>
+                            <a style={{color: 'white'}} href='https://www.github.com/traversar' target='_blank'>
                                 <FaGithub />
-                            </div>
-                        </Link>
+                            </a>
+                        </div>
                     </IconContext.Provider>
                 </div>
             </div>
