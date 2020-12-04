@@ -386,12 +386,25 @@ code {
 .contact-container {
   background-color: var(--contact-color);
   transition: background-color .7s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
+.contact-links {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 90%;
+}
 
-/*
-'rgb(170, 190, 230)'
-'rgb(202, 230, 170)'
-'rgb(230, 170, 178)'
-'rgb(172, 230, 170)'
-*/
+.contact-p {
+  width: 85%;
+  text-align: center;
+}
+
+@media (max-width: 749px) {
+  .contact-links {
+    flex-direction: column;
+  }
+}
