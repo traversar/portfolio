@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {Element} from 'react-scroll';
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib';
@@ -14,12 +15,16 @@ const Contact = () => {
                 </div>
                 <div className='contact-links'>
                     <IconContext.Provider value={{ size: '8vw' }}>
-                        <div>
-                            <FaLinkedin />
-                        </div>
-                        <div>
-                            <FaGithub />
-                        </div>
+                        <Link to='https://www.linkedin.com/in/andrew-travers-8273761bb/'>
+                            <div>
+                                <FaLinkedin />
+                            </div>
+                        </Link>
+                        <Link to='https://github.com/traversar/'>
+                            <div>
+                                <FaGithub />
+                            </div>
+                        </Link>
                     </IconContext.Provider>
                 </div>
             </div>

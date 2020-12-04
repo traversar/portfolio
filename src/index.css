@@ -337,7 +337,7 @@ code {
 
 .badges-circle-container div {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 43%; left: 43%;
   transform: translate(-50%, -50%);
   padding: calc(-.5*var(--d));
   width: var(--d); height: var(--d);
@@ -404,7 +404,7 @@ code {
 }
 
 @media (max-width: 749px) {
-  .contact-links {
+  /* .contact-links {
     flex-direction: column;
-  }
+  } */
 }
