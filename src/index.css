@@ -34,14 +34,24 @@ code {
 .content {
   position:relative;
   left: 0;
-  transition: left 1s;
+  transition: left .7s;
 }
 
 @media (max-width: 749px) {
+
+  /* Disables react-scoll -- replace with different library before use
+  html, body {
+    overflow-x: hidden;
+  } */
+
+  body {
+    position: relative;
+  }
+
   .content-shift {
     position: relative;
     left: 30vw;
-    transition: left 1s;
+    transition: left .7s;
   }
 }
 
@@ -96,6 +106,7 @@ code {
     width: 90%;
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
 
 }
@@ -132,6 +143,12 @@ code {
 }
 
 @media (max-width: 749px) {
+
+  .biodetail-icon-img {
+    width: 50vw;
+    height: 50vw;
+  }
+
   .biodetail-container {
     width: 100vw;
   }
@@ -172,7 +189,7 @@ code {
   width: 10vw;
   height: 25vh;
   text-align: right;
-  transition: font-size 1s;
+  transition: font-size .7s;
 }
 
 .nav-container > div:hover {
@@ -191,46 +208,48 @@ code {
     position: absolute;
     width: 30vw;
     left: -30vw;
-    transition: left 1s;
+    transition: left .7s;
     z-index: 3;
     overflow: hidden;
   }
 
   .nav-container-fixed-show {
     left: 0;
-    transition: left 1s;
+    transition: left .7s;
   }
 
   .nav-container {
     width: 30vw;
     left: -30vw;
-    transition: left 1s;
+    transition: left .7s;
   }
 
   .nav-container-show {
     left: 0;
-    transition: left 1s;
+    transition: left .7s;
     ;
   }
 
 
   .nav-container-togglebtn {
     visibility: visible;
-    transition: left 1s;
+    transition: left .7s;
     left: 0;
   }
 
   .nav-container-togglebtn-active {
     left: 30vw;
-    transition: left 1s;
+    height: 100vh;
+    width: 70vw;
+    transition: left .7s;
 }
 
   .nav-container-togglebtn svg {
     transition:
-      -webkit-transform 1s,
-      -moz-transform 1s,
-      -o-transform 1s,
-      transform 1s;
+      -webkit-transform .7s,
+      -moz-transform .7s,
+      -o-transform .7s,
+      transform .7s;
   }
 
   .nav-container-togglebtn-active svg {
@@ -253,6 +272,7 @@ code {
 @media (max-width: 749px) {
   .emptynav-container {
     visibility: hidden;
+    position: absolute;
   }
 }
 
@@ -260,7 +280,7 @@ code {
 
 .projectdetail-container {
   background-color: var(--projects-color);
-  transition: background-color 1s;
+  transition: background-color .7s;
   display: flex;
   flex-direction: column;
 }
@@ -299,8 +319,9 @@ code {
 
 .badges-container {
   background-color: var(--skills-color);
-  transition: background-color 1s;
+  transition: background-color .7s;
   display: flex;
+  overflow-x: hidden;
 }
 
 .badges-circle-container {
@@ -309,7 +330,6 @@ code {
   --r: calc(.5*(1 + var(--rel))*var(--d)/var(--tan)); /* circle radius */
   --s: calc(2*var(--r) + var(--d)); /* container size */
   position: relative;
-  top: -3%;
   width: var(--s); height: var(--s);
   margin: 0 auto;
   align-self: center;
@@ -319,23 +339,15 @@ code {
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  margin: calc(-.5*var(--d));
+  padding: calc(-.5*var(--d));
   width: var(--d); height: var(--d);
   --az: calc(var(--i)*1turn/var(--m));
   transform:
   rotate(var(--az))
-    translate(var(--r))
+  translate(var(--r))
     rotate(calc(-1*var(--az)))
-}
+  }
 
-/* .badges-circle-container div svg {
-  transition: width 1s;
-  width: 100%
-}
-
-.badges-circle-container svg:hover {
-  width: 160%
-} */
 
 .badges-circle-container h1 {
   position: absolute;
@@ -347,8 +359,8 @@ code {
 
 .badges-icon-container svg {
   cursor: pointer;
-  height: 8vw;
-  width: 8vw;
+  height: 4em;
+  width: 4em;
   transition:
     width .7s,
     height .7s;
@@ -359,11 +371,21 @@ code {
   width: 160%;
 }
 
+@media (max-width: 749px) {
+  .badges-circle-container {
+    top: 50%;
+    transform: translate(0, 50%);
+    width: auto;
+    height: auto;
+    --rel: .3;
+  }
+}
+
 /* Contact */
 
 .contact-container {
   background-color: var(--contact-color);
-  transition: background-color 1s;
+  transition: background-color .7s;
 }
 
 

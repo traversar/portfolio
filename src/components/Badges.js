@@ -56,14 +56,15 @@ const Badges = () => {
     ]
 
     let numsvgs = svgs.length;
-    let hasMid = 0; /* 0 if there's no item in the middle, 1 otherwise */
-    let m = numsvgs - hasMid; /* how many are ON the circle */
-    let tan = Math.tan(Math.PI/m); /* tangent of half the base angle */
+    let hasMid = 0;
+    let m = numsvgs - hasMid;
+    let tan = Math.tan(Math.PI/m);
+    // let tan = 0.45
 
     return (
         <Element name='skills-section'>
             <div className='badges-container detail-container'>
-                <div className='badges-circle-container' style={{width: '30vw', height: '30vw', '--m': m, '--tan': tan.toFixed(2)}}>
+                <div className='badges-circle-container' style={{'--m': m, '--tan': tan.toFixed(2)}}>
                     <h1>{badgeText}</h1>
                     {svgs.map((svg, i) => (
                         <div onMouseOver={() => handleBadgeHover(svg.text)} style={{'--i': i}} className='badges-icon-container'>
