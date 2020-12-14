@@ -55,11 +55,10 @@ const Badges = () => {
         },
     ]
 
-    let numsvgs = svgs.length;
+    let numSvgs = svgs.length;
     let hasMid = 0;
-    let m = numsvgs - hasMid;
+    let m = numSvgs - hasMid;
     let tan = Math.tan(Math.PI/m);
-    // let tan = 0.45
 
     return (
         <Element name='skills-section'>
@@ -67,7 +66,7 @@ const Badges = () => {
                 <div className='badges-circle-container' style={{'--m': m, '--tan': tan.toFixed(2)}}>
                     <h1>{badgeText}</h1>
                     {svgs.map((svg, i) => (
-                        <div onMouseOver={() => handleBadgeHover(svg.text)} style={{'--i': i}} className='badges-icon-container'>
+                        <div key={i} onMouseOver={() => handleBadgeHover(svg.text)} style={{'--i': i}} className='badges-icon-container'>
                             {svg.src}
                         </div>
                     ))}

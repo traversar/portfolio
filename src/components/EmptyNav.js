@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import {Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { scroller } from 'react-scroll'
 
 const EmptyNav = ({
     projects
 }) => {
     let [showProjects, setShowProjects] = useState(false);
-console.log(projects)
+
     const goTo = (destination) => {
         setShowProjects(false)
         scroller.scrollTo(destination, {
@@ -13,10 +13,6 @@ console.log(projects)
             smooth: true,
             delay: 0,
         });
-    }
-
-    const handleProjects = () => {
-        setShowProjects(true)
     }
 
     return (
