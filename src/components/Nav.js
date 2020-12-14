@@ -4,10 +4,10 @@ import { scroller } from 'react-scroll'
 const Nav = ({
     projects
 }) => {
-    let [showProjects, setShowProjects] = useState(false);
+    // let [showProjects, setShowProjects] = useState(false);
 
     const goTo = (destination) => {
-        setShowProjects(false)
+        // setShowProjects(false)
         scroller.scrollTo(destination, {
             duration: 800,
             smooth: true,
@@ -15,9 +15,9 @@ const Nav = ({
         });
     }
 
-    const handleProjects = () => {
-        setShowProjects(true)
-    }
+    // const handleProjects = () => {
+    //     setShowProjects(true)
+    // }
 
     return (
         <div id='nav' className='nav-container-fixed'>
