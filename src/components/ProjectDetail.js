@@ -8,7 +8,7 @@ const ProjectDetail = ({
                 <h1>Recent Projects</h1>
             <div className='projectdetail-details-container'>
                 {projects.map((project, idx) => (
-                    <div key={idx} className='projectdetail-details'>
+                    <div onClick={() => window.location=project.url} key={idx} className='projectdetail-details'>
                         <h2>{project.name}</h2>
                         <h3>{project.summary}</h3>
                         <ul>

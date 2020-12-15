@@ -230,7 +230,6 @@ code {
     ;
   }
 
-
   .nav-container-togglebtn {
     visibility: visible;
     transition: left .7s;
@@ -290,11 +289,18 @@ code {
   flex-direction: row;
 }
 
+
 .projectdetail-details {
   background-color: var(--contact-color);
   padding: 2vh 2vw;
   margin: 1vh 1vw;
   width: 18vw;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.projectdetail-details:hover {
+  background-color: #7e9ada;
 }
 
 @media (max-width:749px) {
