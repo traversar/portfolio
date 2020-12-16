@@ -303,6 +303,18 @@ code {
   background-color: #7e9ada;
 }
 
+.projectdetail-details h2 {
+  border-bottom: 1px solid white;
+}
+
+.projectdetail-details h3 {
+  font-weight: 400;
+}
+
+.projectdetail-details ul {
+  font-weight: 300;
+}
+
 @media (max-width:749px) {
   .projectdetail-container {
     height: auto;
