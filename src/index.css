@@ -45,7 +45,7 @@ code {
 
   .content-shift {
     position: relative;
-    left: 30vw;
+    left: 40vw;
     transition: left .7s;
   }
 }
@@ -145,8 +145,8 @@ code {
 @media (max-width: 749px) {
 
   .biodetail-icon-img {
-    width: 50vw;
-    height: 50vw;
+    width: 40vw;
+    height: 40vw;
   }
 
   .biodetail-container {
@@ -206,10 +206,9 @@ code {
 @media (max-width: 749px) {
   .nav-container-fixed {
     position: absolute;
-    width: 30vw;
-    left: -30vw;
+    width: 40vw;
+    left: -40vw;
     transition: left .7s;
-    z-index: 3;
     overflow: hidden;
   }
 
@@ -219,8 +218,9 @@ code {
   }
 
   .nav-container {
-    width: 30vw;
-    left: -30vw;
+
+    width: 40vw;
+    left: -40vw;
     transition: left .7s;
   }
 
@@ -237,13 +237,15 @@ code {
   }
 
   .nav-container-togglebtn-active {
-    left: 30vw;
+    left: 40vw;
     height: 100vh;
     width: 70vw;
     transition: left .7s;
 }
 
   .nav-container-togglebtn svg {
+    height: 15vw;
+    width: 15vw;
     transition:
       -webkit-transform .7s,
       -moz-transform .7s,
@@ -260,7 +262,7 @@ code {
   }
 
   .nav-container > div {
-    width: 30vw;
+    width: 40vw;
   }
 
 }
@@ -318,6 +320,7 @@ code {
 @media (max-width:749px) {
   .projectdetail-container {
     height: auto;
+    padding: 0 0 21px 0;
   }
 
   .projectdetail-details-container {
