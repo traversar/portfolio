@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
-import { scroller } from 'react-scroll'
+import React from 'react';
 
 const EmptyNav = ({
     projects
 }) => {
-    let [showProjects, setShowProjects] = useState(false);
+    // let [showProjects, setShowProjects] = useState(false);
 
     const goTo = (destination) => {
-        setShowProjects(false)
-        scroller.scrollTo(destination, {
-            duration: 800,
-            smooth: true,
-            delay: 0,
-        });
+        const destinationEl = document.getElementById(destination);
+        destinationEl.scrollIntoView({behavior: 'smooth'})
     }
 
     return (
@@ -23,13 +18,13 @@ const EmptyNav = ({
                 <div style={{backgroundColor: 'var(--projects-color)'}} onMouseOver={() => goTo("projects-section")} onClick={() => goTo("projects-section")}></div>
                 <div style={{backgroundColor: 'var(--bio-color)'}} onMouseOver={() => goTo("welcome-section")} onClick={() => goTo("welcome-section")}></div>
             </div>
-            <div>
+            {/* <div>
             {showProjects &&
                         Object.keys(projects).map(project => (
                             <div>{project}</div>
                         ))
             }
-            </div>
+            </div> */}
         </div>
     )
 }

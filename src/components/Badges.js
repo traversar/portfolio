@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import {Element} from 'react-scroll';
-import { DiHtml5, DiGithubBadge, DiNodejsSmall, DiPython, DiReact, DiPostgresql, DiDjango, DiDocker, DiCss3 } from "react-icons/di";
+import { DiHtml5, DiGit, DiNodejsSmall, DiPython, DiReact, DiPostgresql, DiDjango, DiDocker, DiCss3 } from "react-icons/di";
 import { SiRedux } from "react-icons/si";
 
 const Badges = () => {
@@ -12,8 +11,8 @@ const Badges = () => {
 
     let svgs = [
         {
-            src: (<DiGithubBadge />),
-            text: 'Github'
+            src: (<DiGit />),
+            text: 'Git'
         },
         {
             src: (<DiNodejsSmall />),
@@ -61,18 +60,16 @@ const Badges = () => {
     let tan = Math.tan(Math.PI/m);
 
     return (
-        <Element name='skills-section'>
-            <div className='badges-container detail-container'>
-                <div className='badges-circle-container' style={{'--m': m, '--tan': tan.toFixed(2)}}>
-                    <h1>{badgeText}</h1>
-                    {svgs.map((svg, i) => (
-                        <div key={i} onMouseOver={() => handleBadgeHover(svg.text)} style={{'--i': i}} className='badges-icon-container'>
-                            {svg.src}
-                        </div>
-                    ))}
-                </div>
+        <div id='skills-section' className='badges-container detail-container'>
+            <div className='badges-circle-container' style={{'--m': m, '--tan': tan.toFixed(2)}}>
+                <h1>{badgeText}</h1>
+                {svgs.map((svg, i) => (
+                    <div key={i} onMouseOver={() => handleBadgeHover(svg.text)} style={{'--i': i}} className='badges-icon-container'>
+                        {svg.src}
+                    </div>
+                ))}
             </div>
-        </Element>
+        </div>
     )
 }
 

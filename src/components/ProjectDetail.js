@@ -4,8 +4,8 @@ const ProjectDetail = ({
     projects
 }) => {
     return (
-        <div className='projectdetail-container detail-container'>
-                <h1>Recent Projects</h1>
+        <div id='projects-section' className='projectdetail-container detail-container'>
+                <h1 className='projects-title'>Recent Projects</h1>
             <div className='projectdetail-details-container'>
                 {projects.map((project, idx) => (
                     <div onClick={() => window.location=project.url} key={idx} className='projectdetail-details'>

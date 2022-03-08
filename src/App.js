@@ -6,7 +6,6 @@ import BioDetail from './components/BioDetail';
 import ProjectDetail from './components/ProjectDetail';
 import Badges from './components/Badges'
 import Connect from './components/Connect';
-import {Element} from 'react-scroll';
 import { BiMenu } from "react-icons/bi"
 import { IconContext } from "react-icons";
 
@@ -43,9 +42,7 @@ function App() {
       </IconContext.Provider>
       <div id='content' className='content'>
         <BioDetail />
-        <Element name='projects-section'>
-          <ProjectDetail projects={projects}/>
-        </Element>
+        <ProjectDetail projects={projects}/>
         <Badges />
         <Connect />
       </div>
